@@ -60,7 +60,7 @@ function sumAndMultiply(a, b, c) {
     
   }
  
-
+// this task solved with the help of a T.A.. AYSHEH
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
