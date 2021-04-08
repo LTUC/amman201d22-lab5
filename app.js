@@ -49,8 +49,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sThree=a+b+c;
-  let mThree=a*b*c;
+  let sTwo=sum(a,b)[0];
+  let sThree=sum(sTwo,c)[0];
+  let mTwo= multiply(a,b)[0];
+  let mThree=multiply(mTwo,c)[0];
   return [sThree,mThree,`${a} and ${b} and ${c} sum to ${sThree}.`,`The product of ${a} and ${b} and ${c} is ${mThree}.`]
 }
 
