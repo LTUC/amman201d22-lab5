@@ -84,6 +84,9 @@ function sumArray(sumArr) {
     k= sum (k,testArray[kx])[0];
 }
   return[k,`${testArray} was passed in as an array of numbers, and ${k} is their sum.`]
+
+  
+ 
   }
 
 
