@@ -29,6 +29,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
   let z = a * b;
   return[z, `The product of ${a} and ${b} is ${z}.`]
+ 
   
 }
 
@@ -50,13 +51,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sumation  = sum(a,b)[0];
-  sumation = sum(sumation,c)[0];
-  let multiplication =multiply(a,b)[0] ;
-  multiplication = multiply(multiplication,c)[0];
-  let z =  `${a} and ${b} and ${c} sum to ${sumation}.`
-  let i = `The product of ${a} and ${b} and ${c} is ${multiplication}.`
-  return[sumation, multiplication,z,i ]
+  
     
   }
  
