@@ -112,11 +112,27 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr){
+  let arrayElements = '';
+  let total = 1;
+  for (let i = 0; i < multArr.length; ++i) {
+    console.log(total);
+    console.log(multArr[i]);
+    total = multiply(total, multArr[i])[0]
+    console.log(total);
+    arrayElements = arrayElements + multArr[i];
+    if (i != multArr.length - 1) {
+      arrayElements = arrayElements + ',';
+    }
+  }
+  console.log(arrayElements);
   //eslint-disable-line
+  return [total,'The numbers '+arrayElements+' have a product of '+total+'.'];
 }
+console.log (multiplyArray(testArray));
+  //eslint-disable-line
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
