@@ -50,8 +50,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
   let summation = sum(sum(a,b)[0],c)[0];
-  let firstmulti = multiply(a,b)[0];
-  let multiplication= multiply(firstmulti,c)[0];
+  let multiplication= multiply(multiply(a,b)[0],c)[0];
   return [summation,multiplication, `${a} and ${b} and ${c} sum to ${summation}.`, `The product of ${a} and ${b} and ${c} is ${multiplication}.`]
 }
 //console.log(sumAndMultiply(1,2,3))
