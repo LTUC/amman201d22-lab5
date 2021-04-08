@@ -15,7 +15,6 @@ function sum(a, b,c) {
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
-
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -27,7 +26,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b,c) {
+function multiply(a, b) {
   let cal=a*b;
   return [cal, `The product of ${a} and ${b} is ${cal}.`]
   //eslint-disable-line
@@ -126,12 +125,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
-
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  let multiplication=1;
+  for (let i = 0; i < testDynamicArray.length; i++) {
+    multiplication = multiply(multiplication,testDynamicArray[i])[0];  
+    console.log(i); 
+    console.log(multiplication);  
+  }
+  return [multiplication,`The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${multiplication}.`];
 }
 
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
+ multiplyAnyArray([1,2,3,4,5]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
