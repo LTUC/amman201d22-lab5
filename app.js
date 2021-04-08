@@ -83,9 +83,9 @@ let testArray = [2, 3, 4];
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  let x=sum(testArray[0],testArray[1])[0];
-  let y=sum(x,testArray[2])[0];
-  return [y,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${y} is their sum.`]
+  let x=sum(sumArr[0],sumArr[1])[0];
+  let y=sum(x,sumArr[2])[0];
+  return [y,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${y} is their sum.`]
   
 }
 
@@ -107,11 +107,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let x=multiply(multArr[0],multArr[1])[0];
+  let y=multiply(x,multArr[2])[0];
+  return [y,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of 24.`]
   //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
