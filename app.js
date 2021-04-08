@@ -75,11 +75,9 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) {
   let i=0; 
   let summation =0;
-  let multiplication =1; 
   let arrayElement = '';
   while(i<sumArr.length){
     summation = sum(sumArr[i], summation)[0];
-    multiplication = multiply(sumArr[i], multiplication)[0];
     arrayElement = arrayElement+','+sumArr[i];
     i++;
   }
