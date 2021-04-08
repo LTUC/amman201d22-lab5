@@ -9,7 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  //eslint-disable-line
+  let z = a + b;
+  return [z , `The sum of ${a} and ${b} is ${z}.`];
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -25,12 +26,15 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
+
+
 function multiply(a, b) {
-  //eslint-disable-line
+ let z = a *b ;
+ return [z,`The product of ${a} and ${b} is ${z}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,11 +51,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let summ1 = sum(a,b)[0];
+  let summtot = sum(summ1,c)[0];
+  let multy1 = multiply(a,b)[0];
+  let multytot = multiply(multy1,c)[0];
+  return [summtot,multytot,`${a} and ${b} and ${c} sum to ${summtot}.`,`The product of ${a} and ${b} and ${c} is ${multytot}.`];
+  
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -69,12 +78,17 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let summation=0;
+  for (let i=0 ;i<sumArr.length; i++ ){
+   summation = sum(sumArr[i],summation)[0];
+  
+  } 
+  return [summation,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${summation} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -90,11 +104,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+  let multiplication = 1;
+  for (let i= 0; i < multArr.length; i++) {
+    multiplication = multiply(multiplication,multArr[i])[0];
+  }
+ return [multiplication,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiplication}.`];
+ 
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -118,10 +138,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+let multiplication=1;
+for (let i= 0; i < dynamicArray.length; i++) {
+  multiplication = multiply(multiplication,dynamicArray[i])[0];
+  
+}
+return [multiplication,`The numbers ${dynamicArray} have a product of ${multiplication}.`];
+  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
