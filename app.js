@@ -49,8 +49,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sThree=a+b+c;
-  let mThree=a*b*c;
+  let sTwo=sum(a,b)[0];
+  let sThree=sum(sTwo,c)[0];
+  let mTwo= multiply(a,b)[0];
+  let mThree=multiply(mTwo,c)[0];
   return [sThree,mThree,`${a} and ${b} and ${c} sum to ${sThree}.`,`The product of ${a} and ${b} and ${c} is ${mThree}.`]
 }
 
@@ -73,12 +75,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
+  let arSum=0;
+  for (let i=0;i<sumArr.length;i++){
+    arSum=sum(arSum,sumArr[i])[0];
+  }
+  return [arSum,`${sumArr} was passed in as an array of numbers, and ${arSum} is their sum.`]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
