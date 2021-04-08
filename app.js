@@ -10,6 +10,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   //eslint-disable-line
+  let z= a + b ;
+  return[z,`The sum of ${(a)} and ${b} is ${z}.`]
+
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
