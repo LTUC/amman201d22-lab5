@@ -8,7 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b, c) {
+function sum(a, b) {
   //eslint-disable-line
   let x = a +b 
   return [x , 'The sum of ' + a + ' and ' + b + ' is ' + x + '.' ]
@@ -27,7 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b, c) {
+function multiply(a, b) {
   //eslint-disable-line
   let x = a * b
   return[x , 'The product of ' + a + ' and ' + b + ' is ' + x + '.']
