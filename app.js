@@ -49,9 +49,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let sum= a + b + c;
-  let m = a * b * c;
-  return [sum,m,`${a} and ${b} and ${c} sum to 16.`,`The product of ${a} and ${b} and ${c} is 140.` ]
+  let x= sum(a,b);
+  let y= sum(x[0],c);
+  console.log(y[0]);
+  let m = multiply(a,b);
+  let z=multiply(m[0],c);
+  console.log(z[0]);
+  return [y[0],z[0],`${a} and ${b} and ${c} sum to 16.`,`The product of ${a} and ${b} and ${c} is 140.` ]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
