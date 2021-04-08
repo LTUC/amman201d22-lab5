@@ -84,12 +84,8 @@ function sumArray(sumArr) {
     k= sum (k,testArray[kx])[0];
 }
   return[k,`${testArray} was passed in as an array of numbers, and ${k} is their sum.`]
-
-  
  
   }
-
-
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -110,10 +106,15 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
+  let h=1;
+  for (let ky=0;ky<testArray.length;ky++){
+    h=multiply(h,testArray[ky])[0];
+  }
+  return[h, `The numbers ${testArray} have a product of ${h}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -138,9 +139,16 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
+  let f=1;
+for(let n=0;n<testDynamicArray.length;n++){
+  f=multiply(f,testDynamicArray[n])[0]
+}
+return[f,`The numbers ${testDynamicArray} have a product of ${f}.`]
 }
 
+
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
