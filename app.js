@@ -104,6 +104,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let m=1;
+  let x = sumArr.toString();
+  for (let index = 0; index < testArray.length; index++) {
+    m *= testArray[index];
+   
+  }
+
+
+return  [m,'The numbers '+x+' have a product of '+m+'.'];
+
   //eslint-disable-line
 }
 
