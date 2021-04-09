@@ -49,8 +49,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply (a, b, c) {
-  let sumation = sum(a, b)[0] + c ;
-  let multiplication = multiply(a,b)[0] * c ;
+  let sumation = sum(a, b)[0]  ;
+  sumation = sum(sumation, c)[0] ;
+  let multiplication = multiply(a,b)[0] ;
+  multiplication = multiply(multiplication,c)[0] ;
   return [sumation , multiplication ,`${a} and ${b} and ${c} sum to ${sumation}.`,`The product of ${a} and ${b} and ${c} is ${multiplication}.`];
 }
 
