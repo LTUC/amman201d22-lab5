@@ -13,7 +13,7 @@ function sum(a, b){
   let x = a + b;
   return [x,`The sum of ${a} and ${b} is ${x}.`]
 
-
+}
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
