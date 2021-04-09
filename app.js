@@ -51,8 +51,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply (a, b, c) {
-  let sumation = sum(a, b)[0] + c ;
-  let multiplication = multiply(a,b)[0] * c ;
+  let sumation = sum(a, b)[0]  ;
+  sumation = sum(sumation, c)[0] ;
+  let multiplication = multiply(a,b)[0] ;
+  multiplication = multiply(multiplication,c)[0] ;
   return [sumation , multiplication ,`${a} and ${b} and ${c} sum to ${sumation}.`,`The product of ${a} and ${b} and ${c} is ${multiplication}.`];
 }
 
@@ -75,12 +77,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
-}
+  let sumA  = sum(testArray[0],testArray[1]);
+   sumA = sum(sumA[0], testArray[2]);
+    return  [sumA[0], `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumA[0]} is their sum.`];
+  }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
