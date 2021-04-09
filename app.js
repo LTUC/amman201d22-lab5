@@ -26,8 +26,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  let c =a*b;
-  return [c, `The product of ${a} and ${b} is ${c}.`];
+  let d =a*b;
+  return [d, `The product of ${a} and ${b} is ${d}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
