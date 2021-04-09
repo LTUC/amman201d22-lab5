@@ -105,9 +105,9 @@ function multiplyArray(multArr) {
   return  [multA[0], `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${multA[0]}.`];
   }
 
-
+  
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
