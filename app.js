@@ -50,8 +50,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  //First process
+  let secondsum = sum(a, b)[0];
+  secondsum = sum(secondsum,c)[0];
+  //Secondprocess
+  let secondmul = multiply(a, b)[0];
+  secondmul = multiply(secondmul,c)[0];
+  return [secondsum, secondmul, `${a} and ${b} and ${c} sum to ${secondsum}.`,`The product of ${a} and ${b} and ${c} is ${secondmul}.`];
 }
+testSumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
