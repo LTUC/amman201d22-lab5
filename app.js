@@ -83,14 +83,24 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) {
-  let sum4 =0;
-  for (let i=0; i<sumArr.length; i++){
-    sum4 += testArray[i];
-  }
 
-  return [sum4, `${sumArr} was passed in as an array of numbers, and ${sum4} is their sum.`];
+function sumArray(sumArr) {
+  let sum4=0;
+  for (let i=0;i<sumArr.length;i++){
+    sum4=sum(sum4,sumArr[i])[0];
+  }
+   return [sum4, `${sumArr} was passed in as an array of numbers, and ${sum4} is their sum.`];
 }
+
+
+// function sumArray(sumArr) {
+//   let sum4 =0;
+//   for (let i=0; i<sumArr.length; i++){
+//     sum4 += testArray[i];
+//   }
+
+//   return [sum4, `${sumArr} was passed in as an array of numbers, and ${sum4} is their sum.`];
+// }
 
 
 
