@@ -112,10 +112,10 @@ Test this function by hand in the console to get it working, and when you think 
 function multiplyArray(multArr) {
   //eslint-disable-line
   let n=1
-for(let i=0;i<testArray.length;i++){
-  n=multiply(n,testArray[i])[0]
+for(let i=0;i<multArr.length;i++){
+  n=multiply(n,multArr[i])[0]
 }
-return[n,'The numbers '+testArray+' have a product of '+n+'.']
+return[n,'The numbers '+multArr+' have a product of '+n+'.']
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
