@@ -83,10 +83,10 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(sumArr) {
   //eslint-disable-line
   let m=0
-  for(let i=0;i<testArray.length;i++){
-    m=sum(m,testArray[i])[0]
+  for(let i=0;i<sumArr.length;i++){
+    m=sum(m,sumArr[i])[0]
   }
-  return[m,testArray+' was passed in as an array of numbers, and '+m+' is their sum.']
+  return[m,sumArr+' was passed in as an array of numbers, and '+m+' is their sum.']
 }
 
 // Here is the test for sumArray(); uncomment it to run it
