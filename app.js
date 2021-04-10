@@ -9,7 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  //eslint-disable-line
+  let sumation = a + b;
+  return [sumation, `The sum of ${a} and ${b} is ${sumation}.`];
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -26,8 +27,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  //eslint-disable-line
+  let mu = a * b;
+  return [mu, `The product of ${a} and ${b} is ${mu}.`];
 }
+testMultiply(5, 9)
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -47,8 +50,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  //First process
+  let secondsum = sum(a, b)[0];
+  secondsum = sum(secondsum,c)[0];
+  //Secondprocess
+  let secondmul = multiply(a, b)[0];
+  secondmul = multiply(secondmul,c)[0];
+  return [secondsum, secondmul, `${a} and ${b} and ${c} sum to ${secondsum}.`,`The product of ${a} and ${b} and ${c} is ${secondmul}.`];
 }
+testSumAndMultiply(4, 7, 5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
