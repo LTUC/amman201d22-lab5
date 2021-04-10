@@ -143,9 +143,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
-}
 
+  let productof5 = dynamicArray[0];
+  for (let i = 1; i < dynamicArray.length; i++) {
+    productof5 = multiply(productof5, dynamicArray[i])[0];
+  }
+  return [productof5, `The numbers ${dynamicArray[0]},${dynamicArray[1]},${dynamicArray[2]},${dynamicArray[3]},${dynamicArray[4]} have a product of ${productof5}.`];
+
+}
+testMultiplyAnyArray(testDynamicArray);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
 
