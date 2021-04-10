@@ -58,6 +58,7 @@ function sumAndMultiply(a, b, c) {
   return [plus, mult, `${a} and ${b} and ${c} sum to ${plus}.`, `The product of ${a} and ${b} and ${c} is ${mult}.`];
 
 }
+
 testSumAndMultiply(4, 7, 5)
 console.log(sumAndMultiply(4, 7, 5))
 // Here is the test for sumAndMultiply(); uncomment it to run it
