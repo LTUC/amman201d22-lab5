@@ -50,11 +50,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let summation = a + b + c;
-  let multiplication = a * b * c; 
-
-  return[summation, multiplication, `${a} and ${b} and ${c} sum to ${summation}.`, `The product of ${a} and ${b} and ${c} is ${multiplication}.`]
+  let sum2=sum(a,b)[0];
+  let sum3=sum(sum2,c)[0];
+  let multiply2= multiply(a,b)[0];
+  let multiply3=multiply(multiply2,c)[0];
+  return [sum3,multiply3,`${a} and ${b} and ${c} sum to ${sum3}.`,`The product of ${a} and ${b} and ${c} is ${multiply3}.`]
 }
+
+
+// function sumAndMultiply(a, b, c) {
+//   let summation = a + b + c;
+//   let multiplication = a * b * c; 
+
+//   return[summation, multiplication, `${a} and ${b} and ${c} sum to ${summation}.`, `The product of ${a} and ${b} and ${c} is ${multiplication}.`]
+// }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
  testSumAndMultiply(4,7,5);
