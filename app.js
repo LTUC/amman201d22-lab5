@@ -27,10 +27,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  let multiply= a*b;
- return[multiply, `The product of ${a} and ${b} is 45.`];
+  let mu = a * b;
+  return [mu, `The product of ${a} and ${b} is ${mu}.`];
 }
-testMultiply(5,9)
+testMultiply(5, 9)
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -50,9 +50,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
-}
+  let plus = sum(a, b, c)[0];
+  plus = sum(plus, c)[0];
+  let mult = multiply(a, b, c)[0];
+  mult = multiply(mult, c)[0];
 
+  return [plus, mult, `${a} and ${b} and ${c} sum to ${plus}.`, `The product of ${a} and ${b} and ${c} is ${mult}.`];
+
+}
+testSumAndMultiply(4, 7, 5)
+console.log(sumAndMultiply(4, 7, 5))
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
 
