@@ -121,13 +121,26 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
+
+// Write your code here
 function multiplyArray(multArr) {
-  let sum =1;
-  for (let i=0; i<multArr.length; i++){
-    sum = sum * multArr[i];
+  let sum=1;
+  for (let i=0;i<multArr.length;i++){
+    sum=multiply(sum,multArr[i])[0];
   }
   return [sum,`The numbers ${multArr} have a product of ${sum}.`]
 }
+
+
+
+
+// function multiplyArray(multArr) {
+//   let sum =1;
+//   for (let i=0; i<multArr.length; i++){
+//     sum = sum * multArr[i];
+//   }
+//   return [sum,`The numbers ${multArr} have a product of ${sum}.`]
+// }
 
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyArray(testArray);
