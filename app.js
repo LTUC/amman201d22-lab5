@@ -130,8 +130,6 @@ function multiplyAnyArray(dynamicArray) {
   let multiplication=1;
   for (let i = 0; i < testDynamicArray.length; i++) {
     multiplication = multiply(multiplication,testDynamicArray[i])[0];  
-    console.log(i); 
-    console.log(multiplication);  
   }
   return [multiplication,`The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${multiplication}.`];
 }
