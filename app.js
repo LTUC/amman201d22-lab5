@@ -79,9 +79,10 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  let sum2= sumAndMultiply(testArray[0],testArray[1],testArray[2])[0];
-  
-  return [sum2,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and 9 is their sum.`];
+   let sum1= sum(sumArr[0],sumArr[1])[0];
+   let sum2= sum(sum1,sumArr[2])[0];
+
+   return [sum2,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and 9 is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -102,9 +103,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  let multi2= sumAndMultiply(testArray[0],testArray[1],testArray[2])[1];
-  
-  return [multi2,`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of 24.`];
+  //eslint-disable-line
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
