@@ -9,7 +9,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-  //eslint-disable-line
+let r = a + b;
+return [r, 'The sum of ' + a + ' and ' + b + ' is ' + r + '.'];
 }
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -26,11 +27,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-  //eslint-disable-line
-}
+  let r = a * b;
+  return [r, 'The product of ' + a + ' and ' + b + ' is ' + r +'.'];
+  }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -47,11 +49,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+  let array =[a,b,c];
+  let sumNew= 0;
+  let multiNew= 1;
+for (let i=0 ; i<=2 ; i++){
+  sumNew = sum(sumNew, array[i])[0];
+  multiNew = multiply(multiNew, array[i])[0];
+}
+  return [sumNew, multiNew, a + ' and ' + b + ' and ' + c + ' sum to ' + sumNew +'.','The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiNew + '.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -69,12 +78,14 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-  //eslint-disable-line
-}
+let sumFirst =sum(sumArr[0] ,sumArr[1])[0];
+let sumFinal =sum(sumFirst ,sumArr[2])[0];
 
+return[sumFinal, sumArr +' was passed in as an array of numbers, and ' + sumFinal +' is their sum.'];
+}
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -90,11 +101,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+let multiFirst = multiply(multArr[0] ,multArr[1])[0];
+let multiFinal = multiply(multiFirst ,multArr[2])[0];
+  
+return [multiFinal,'The numbers ' + multArr + ' have a product of ' + multiFinal + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -118,10 +132,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
-  //eslint-disable-line
+let multiFinal=1;  
+for(let i = 0; i < dynamicArray.length; i++)
+{
+multiFinal = multiply(dynamicArray[i] , multiFinal)[0];
+}
+return [multiFinal,'The numbers ' + dynamicArray + ' have a product of ' + multiFinal + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
