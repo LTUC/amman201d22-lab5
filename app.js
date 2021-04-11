@@ -51,10 +51,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let add= a + b + c ;
-  let mull = a * b * c ;
+  let summation = sum(a, sum(b,c)[0])[0];
+  let mul = multiply(a, multiply(b,c)[0])[0];
+  return [summation, mul, `${a} and ${b} and ${c} sum to ${summation}.`, `The product of ${a} and ${b} and ${c} is ${mul}.`];
   
-   return [add, mull, `${a} and ${b} and ${c} sum to ${add}.`, `The product of ${a} and ${b} and ${c} is ${mull}.` ]
 }
 
 
