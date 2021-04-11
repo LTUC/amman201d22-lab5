@@ -54,6 +54,7 @@ function sumAndMultiply(a, b, c) {
   let summation = sum(a, sum(b,c)[0])[0];
   let mul = multiply(a, multiply(b,c)[0])[0];
   return [summation, mul, `${a} and ${b} and ${c} sum to ${summation}.`, `The product of ${a} and ${b} and ${c} is ${mul}.`];
+  
 }
 
 
