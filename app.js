@@ -78,8 +78,8 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
-let sumFirst =sum(sumArr[0],sumArr[1])[0];
-let sumFinal =sum(sumFirst,sumArr[2])[0];
+let sumFirst =sum(sumArr[0] ,sumArr[1])[0];
+let sumFinal =sum(sumFirst ,sumArr[2])[0];
 
 return[sumFinal, sumArr +' was passed in as an array of numbers, and ' + sumFinal +' is their sum.'];
 }
@@ -101,11 +101,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  //eslint-disable-line
+let multiFirst = multiply(multArr[0] ,multArr[1])[0];
+let multiFinal = multiply(multiFirst ,multArr[2])[0];
+  
+return [multiFinal,'The numbers ' + multArr + ' have a product of ' + multiFinal + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
