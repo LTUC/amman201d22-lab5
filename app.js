@@ -50,10 +50,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-   let sum1 = sum(a,b)[0] + c;
-   let mul1 = multiply(a,b)[0] * c;
-   
-   return [sum1, mul1, `${a} and ${b} and ${c} sum to ${sum1}.`,`The product of ${a} and ${b} and ${c} is ${mul1}.`]
+  let array =[a,b,c];
+  let totalSum= 0;
+  let totalMulti= 1;
+for (let i = 0 ; i <= 2 ; i++){
+  totalSum = sum(totalSum,array[i])[0];
+  totalMulti = multiply(totalMulti,array[i])[0];
+}
+   return [totalSum, totalMulti, `${a} and ${b} and ${c} sum to ${totalSum}.`,`The product of ${a} and ${b} and ${c} is ${totalMulti}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
