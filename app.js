@@ -34,6 +34,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+  
   let multiplication= a * b;
   return[multiplication, `The product of ${a} and ${b} is ${multiplication}.`];
 
@@ -61,11 +62,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let summation= sum(a,b)[0] + c;
-  let multiplication = multiply(a,b)[0] * c;
+let firstSum= sum(a,b)[0];
+let summation= sum(firstSum,c)[0];
+let firstMulti= multiply(a,b)[0];
+let multiplication = multiply(firstMulti,c)[0];
   
   return[summation,multiplication,`${a} and ${b} and ${c} sum to ${summation}.`,`The product of ${a} and ${b} and ${c} is ${multiplication}.`]
-
+  
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -88,7 +91,8 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  let sumAll= sumArr[0]+sumArr[1]+sumArr[2];
+  let firstArrSum = sum(sumArr[0],sumArr[1])[0];
+  let sumAll= sum(firstArrSum,sumArr[2])[0];
   return[sumAll,`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumAll} is their sum.`];
 
 }
@@ -112,7 +116,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) {
   //eslint-disable-line
-  let multAll= multArr[0]*multArr[1]*multArr[2];
+  let firstArrMulti = multiply(multArr[0],multArr[1])[0];
+  let multAll= multiply(firstArrMulti,multArr[2])[0];
   return[multAll,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multAll}.`];
 
  }
