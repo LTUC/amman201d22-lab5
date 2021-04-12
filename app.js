@@ -41,9 +41,12 @@ return [z,sumArr[0]+','+ sumArr[1] +','+ sumArr[2] +' was passed in as an array 
  testSumArray(testArray);
 
 function multiplyArray(multArr) {
-multArr = testArray
-let z = multArr[0]*multArr[1]*multArr[2]
-return [z,'The numbers '+multArr[0]+','+ multArr[1] +','+ multArr[2] +' have a product of '+z+'.']
+  //eslint-disable-line
+  let x=1;
+  for(let i =0;i<multArr.length ; i++){
+    x=multiply(x,multArr[i])[0];
+  }
+  return[x,`The numbers ${multArr} have a product of ${x}.`]
 }
 
 
