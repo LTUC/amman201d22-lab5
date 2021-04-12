@@ -17,9 +17,11 @@ return [z , 'The product of '+ a + ' and '+b + ' is ' + z + '.']
 
 
 function sumAndMultiply(a, b, c) {
-let y = a + b + c 
-let z = a * b * c
-return [y, z ,a+ ' and '+b+' and '+c+' sum to '+y+'.','The product of '+a+' and '+b+' and '+c+' is '+z+'.'] 
+  //eslint-disable-line
+  let x=sum(sum(a,b)[0],c)[0];
+  let y=multiply(multiply(a,b)[0],c)[0];
+  return[x,y,`${a} and ${b} and ${c} sum to ${x}.`,`The product of ${a} and ${b} and ${c} is ${y}.`]
+
 }
 
  testSumAndMultiply(4,7,5);
